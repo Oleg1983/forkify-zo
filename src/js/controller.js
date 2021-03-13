@@ -13,9 +13,9 @@ import 'regenerator-runtime/runtime'; // for async await
 // https://forkify-api.herokuapp.com/v2
 
 // from parcel
-if (module.hot) {
-  module.hot.accept();
-}
+// if (module.hot) {
+//   module.hot.accept();
+// }
 
 const controlRecipes = async function () {
   try {
@@ -113,7 +113,7 @@ const controlAddRecipe = async function (newRecipe) {
     addRecipeView.renderMessage();
 
     // Render bookmark view
-    bookmarksView.render(model.state.bookmarks)
+    bookmarksView.render(model.state.bookmarks);
 
     // Change ID in URL
     window.history.pushState(null, '', `#${model.state.recipe.id}`);
